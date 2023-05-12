@@ -35,7 +35,10 @@ PFERepository pfeRepository;
 		
 	}
 
-	
+	public  List<PFE> findPFEByNom(String mc) {
+		// TODO Auto-generated method stub
+		return pfeRepository.findBytitleContains(mc);
+	}
 	
 	public PFE findPFEById(Long id) {
 		return pfeRepository.findById(id).get();

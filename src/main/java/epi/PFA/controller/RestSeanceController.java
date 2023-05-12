@@ -3,7 +3,6 @@ package epi.PFA.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,57 +15,53 @@ import org.springframework.web.bind.annotation.RestController;
 
 import epi.PFA.entities.Enseignant;
 import epi.PFA.entities.Etudiant;
-import epi.PFA.entities.PFE;
-import epi.PFA.repository.PFERepository;
-import epi.PFA.sevice.EnseignantService;
+import epi.PFA.entities.Salle;
+import epi.PFA.entities.Seance;
 import epi.PFA.sevice.EtudiantService;
-import epi.PFA.sevice.PFEService;
+import epi.PFA.sevice.SalleService;
+import epi.PFA.sevice.SeanceService;
+
+
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/api/pfe/")
-public class RestPFEController {
+@RequestMapping("/api/seance/")
+public class RestSeanceController {
 	
 	
 	@Autowired
-	
-	PFEService pfeService;
-	EtudiantService etudiantService;
-	EnseignantService enseignantService;
-
-    @GetMapping("all")
-	public List<PFE> all (){ 
-    	/*model.addAttribute("etudiant", etudiantService.getAllEtudiants());
-		model.addAttribute("encadreur", enseignantService.getAllEnseignants());*/
-		return pfeService.getAllPfes();
+	SeanceService seanceService;
+@GetMapping("all")
+	public List<Seance> all (){ 
+		return seanceService.getAllSeance();
 
 	}
 
 	@GetMapping ("{id}")
-	public PFE getPFE (@PathVariable Long id) {
+	public Seance getSeance (@PathVariable Long id) {
 
-	return pfeService.findPFEById(id);
+	return seanceService.findSeanceById(id);
 
 	}
 
 	@PostMapping("add")
-	public PFE addChaine (@RequestBody PFE p) { 
-	
-	
-		return pfeService.persistPFE(p);
+	public Seance addSeance (@RequestBody Seance se) { 
+		return seanceService.persistSeance(se);
 
 	}
 
 	@DeleteMapping("{id}")
-	public void deleteChaine (@PathVariable Long id) { 
-		pfeService.deletePFE(id); 
-		
+	public  String deleteSeance (@PathVariable Long id) { 
+		seanceService.deleteSeance(id); 
+		return "Suppression réussite";
 
 	}
-
 	@PutMapping("update")
-	public PFE updatePFE (@RequestBody PFE p) {
-		return pfeService.persistPFE(p);
+	public Seance updateSeance(@RequestBody  Seance se)
+	{
+		 return seanceService.persistSeance(se);
+		
 	}
+	
 
 }

@@ -31,11 +31,11 @@ public class Enseignant{
 	private String motdepasse;
 	
 	/*@OneToMany(mappedBy="rapporteur")
-	List<Soutenance> rappoteurs;
+	List<PFE> rappoteurs;
 	
 	@OneToMany(mappedBy="president")
 	
-	List<Soutenance> presidents;*/
+	List<PFE> presidents;*/
 	
 /*@OneToMany(mappedBy="encadreur")
 	

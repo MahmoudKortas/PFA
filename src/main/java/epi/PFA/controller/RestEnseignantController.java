@@ -3,6 +3,7 @@ package epi.PFA.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,8 +27,9 @@ public class RestEnseignantController {
 	
 	@Autowired
 	EnseignantService enseignantService;
-@GetMapping()
-	public List<Enseignant> all (){ 
+	
+    @GetMapping("all")
+	public List<Enseignant> all(){ 
 		return enseignantService.getAllEnseignants();
 
 	}
@@ -48,13 +50,21 @@ public class RestEnseignantController {
 	@DeleteMapping("{id}")
 	public void deleteChaine (@PathVariable Long id) { 
 		enseignantService.deleteEnseignant(id); 
-		//return "Suppression réussite";
+	
 
 	}
-
+	@GetMapping("edit/{id}")
+	public String editEnseignant(@PathVariable Long id, Model model) {
+		model.addAttribute("enseignant", enseignantService.findEnseignantById(id));
+		
+		return "editEnseignant";
+	}
+	
 	@PutMapping("update")
-	public Enseignant updateEnseignant (@RequestBody Enseignant en) {
-		return enseignantService.persistEnseignant(en);
+	public Enseignant updateEnseignant(@RequestBody  Enseignant en)
+	{
+		 return enseignantService.persistEnseignant(en);
+		
 	}
 
 }

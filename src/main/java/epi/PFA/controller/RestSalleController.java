@@ -15,49 +15,64 @@ import org.springframework.web.bind.annotation.RestController;
 
 import epi.PFA.entities.Enseignant;
 import epi.PFA.entities.Etudiant;
+import epi.PFA.entities.Salle;
 import epi.PFA.sevice.EtudiantService;
+import epi.PFA.sevice.SalleService;
 
 
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/api/etudiants/")
-public class RestEtudiantController {
+@RequestMapping("/api/salles/")
+public class RestSalleController {
 	
 	
 	@Autowired
-	EtudiantService etudiantService;
+	SalleService salleService;
 @GetMapping("all")
-	public List<Etudiant> all (){ 
-		return etudiantService.getAllEtudiants();
+	public List<Salle> all (){ 
+		return salleService.getAllSalles();
 
 	}
 
 	@GetMapping ("{id}")
-	public Etudiant getEtudiant (@PathVariable Long id) {
+	public Salle getSalle (@PathVariable Long id) {
 
-	return etudiantService.findEtudiantById(id);
+	return salleService.findSalleById(id);
 
 	}
 
 	@PostMapping("add")
-	public Etudiant addEtudiant (@RequestBody Etudiant e) { 
-		return etudiantService.persistEtudiant(e);
+	public Salle addSalle (@RequestBody Salle s) { 
+		return salleService.persistSalle(s);
 
 	}
 
 	@DeleteMapping("{id}")
-	public  String deleteEtudiant (@PathVariable Long id) { 
-		etudiantService.deleteEtudiant(id); 
+	public  String deleteSalle (@PathVariable Long id) { 
+		salleService.deleteSalle(id); 
 		return "Suppression réussite";
 
 	}
 	@PutMapping("update")
-	public Etudiant updateEtudiant(@RequestBody  Etudiant etud)
+	public Salle updateSalle(@RequestBody  Salle sal)
 	{
-		 return etudiantService.persistEtudiant(etud);
 		
+	
+		return salleService.persistSalle(sal);
+		 
 	}
 	
+	
+	 
+	/*@PutMapping("{id}")
+	public String updateEtudiant (@RequestBody Etudiant e,@PathVariable Long id) {
+		System.out.println("aaaaaaaaaaaaaaaaa");
+		System.out.println("Etudiant:"+e+"id"+id);
+		Etudiant ee=etudiantService.findEtudiantById(e.getIdEtud()); 	
+		
+		 etudiantService.persistEtudiant(e);
+			return "updateEtudiant réussite";
+	}*/
 
 }

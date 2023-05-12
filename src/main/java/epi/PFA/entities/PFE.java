@@ -29,6 +29,11 @@ public class PFE {
 	@ManyToOne
 	private Enseignant encadreur;
 	@ManyToOne
-	private Document document;
-
+	private Enseignant rapporteur;
+	@ManyToOne
+	private Enseignant president;
+	@ManyToOne
+	private Salle salle;
+	@ManyToOne
+	private Seance seance;
 }

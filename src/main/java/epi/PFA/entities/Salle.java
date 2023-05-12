@@ -21,9 +21,9 @@ public class Salle {
 	private long idSalle;
 	private String Nom;
 	
-	@OneToMany(mappedBy="salle")
+	/*@OneToMany(mappedBy="salle")
 
-	List<PFE> salles;
+	List<PFE> salles;*/
 
 
 }

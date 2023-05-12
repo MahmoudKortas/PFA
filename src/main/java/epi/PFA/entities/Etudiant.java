@@ -32,8 +32,8 @@ public class Etudiant {
 	private String departement ;
 	private String email;
 	private String motdepasse;
-	/*
-	@OneToMany(mappedBy="etudiant")
+	
+	/*@OneToMany(mappedBy="etudiant")
 
 	List<PFE> etudiants;*/
 
