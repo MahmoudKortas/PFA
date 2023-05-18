@@ -48,9 +48,10 @@ public class RestEnseignantController {
 	}
 
 	@DeleteMapping("{id}")
-	public void deleteChaine (@PathVariable Long id) { 
-		enseignantService.deleteEnseignant(id); 
-	
+
+	public  String deleteEnseignant(@PathVariable Long id) { 
+			enseignantService.deleteEnseignant(id); 
+			return "Suppression réussite";
 
 	}
 	@GetMapping("edit/{id}")
