@@ -7,10 +7,11 @@ import org.springframework.stereotype.Repository;
 
 //import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import epi.PFA.entities.Salle;
+import epi.PFA.entities.Role;
+
 @Repository
 
-public interface SalleRepository extends JpaRepository<Salle, Long>{
+public interface RoleRepository extends JpaRepository<Role, Long>{
 
 	
 }

@@ -7,10 +7,10 @@ import org.springframework.stereotype.Repository;
 
 //import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import epi.PFA.entities.Salle;
+import epi.PFA.entities.Specialite;
 @Repository
 
-public interface SalleRepository extends JpaRepository<Salle, Long>{
+public interface SpecialiteRepository extends JpaRepository<Specialite, Long>{
 
 	
 }
