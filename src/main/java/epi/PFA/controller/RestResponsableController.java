@@ -26,7 +26,7 @@ public class RestResponsableController {
 	@Autowired
 	ResponsableService responsableService;
 
-	@GetMapping()
+	@GetMapping("all")
 	public List<Responsable> all() {
 		return responsableService.getAllResponsable();
 

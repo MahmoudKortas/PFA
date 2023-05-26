@@ -19,7 +19,7 @@ public class Specialite {
 	@Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long idSpecialite;
-	private String Description;
+	private String Nom;
 	
 	/*@OneToMany(mappedBy="salle")
 

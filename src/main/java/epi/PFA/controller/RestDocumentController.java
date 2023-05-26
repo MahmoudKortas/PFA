@@ -30,7 +30,7 @@ public class RestDocumentController {
 	@Autowired
 	DocumentService documentService;
 
-	@GetMapping()
+	@GetMapping("all")
 	public List<Document> all() {
 		return documentService.getAllDocuments();
 

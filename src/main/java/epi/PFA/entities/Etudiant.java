@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 
@@ -27,11 +28,15 @@ public class Etudiant {
 	private int tel;
 	private String adresse;
 	private String niveau ;
-	private String specialite ;
-	private String diplome ;
-	private String departement ;
+
 	private String email;
 	private String motdepasse;
+	
+	@ManyToOne
+	private Departement departement;
+	@ManyToOne
+	private Specialite specialite;
+	
 	
 	/*@OneToMany(mappedBy="etudiant")
 

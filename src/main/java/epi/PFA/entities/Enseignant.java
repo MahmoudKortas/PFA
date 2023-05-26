@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 
@@ -29,6 +30,11 @@ public class Enseignant{
 	private String domaine;
 	private String email;
 	private String motdepasse;
+	
+	@ManyToOne
+	private Departement departement;
+	
+	
 	
 	/*@OneToMany(mappedBy="rapporteur")
 	List<PFE> rappoteurs;

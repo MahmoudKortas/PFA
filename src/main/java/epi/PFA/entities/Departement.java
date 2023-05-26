@@ -19,7 +19,7 @@ public class Departement {
 	@Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long idDep;
-	private String Description;
+	private String Nom;
 	
 	/*@OneToMany(mappedBy="salle")
 

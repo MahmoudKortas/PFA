@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,8 +17,13 @@ public class Responsable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 private long idUser;
-	private String login;
+	private String Nom;
+	private String Prenom;
+	private String email;
+	private String Tel;
 	private String motdepasse;
+	private String Date_responsabilité;
 	
-
+	@ManyToOne
+	private Departement departement;
 }

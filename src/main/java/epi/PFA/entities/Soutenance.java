@@ -21,9 +21,9 @@ public class Soutenance {
 	 @Id
 	    @GeneratedValue(strategy=GenerationType.IDENTITY)
 private long idSout;
-private Date date;
-private Date heuredebut;
-private Date heurefin;
+private String date;
+private String heuredebut;
+private String heurefin;
 private String salle;
 
 @ManyToOne

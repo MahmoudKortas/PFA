@@ -20,7 +20,7 @@ public class Seance {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long idSeance;
 
-	private String description;
+	private String Nom;
 	
 	/*@OneToMany(mappedBy="seance")
 

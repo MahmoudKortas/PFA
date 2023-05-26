@@ -23,12 +23,13 @@ public class Document {
 	private String titre;
 	private String description;
 	private String proprietaire;
-	private Date datedepot;
+	private String datedepot;
 	private String photo;
 	/*@OneToMany(mappedBy="document")
 
 	List<PFE> documents;*/
-
+	@ManyToOne
+	private Etudiant etudiant;
 	@ManyToOne
 	private Enseignant enseignant;
 }
