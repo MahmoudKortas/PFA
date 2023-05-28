@@ -18,12 +18,14 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 public class Soutenance {
-	 @Id
-	    @GeneratedValue(strategy=GenerationType.IDENTITY)
+ @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 private long idSout;
 private String Description;	 
 private String date;
+
 private String Etat;
+
+
 
 
 
@@ -35,6 +37,8 @@ private Enseignant president;
 private Salle salle;
 @ManyToOne
 private Seance seance;
+
+
 @ManyToOne
 private PFE pfe;
 
