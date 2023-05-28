@@ -21,16 +21,20 @@ public class Soutenance {
 	 @Id
 	    @GeneratedValue(strategy=GenerationType.IDENTITY)
 private long idSout;
+private String Description;	 
 private String date;
-private String heuredebut;
-private String heurefin;
-private String salle;
+private String Etat;
+
+
 
 @ManyToOne
 private Enseignant rapporteur;
 @ManyToOne
 private Enseignant president;
-
+@ManyToOne
+private Salle salle;
+@ManyToOne
+private Seance seance;
 @ManyToOne
 private PFE pfe;
 

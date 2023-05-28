@@ -25,7 +25,7 @@ public class RestSoutenanceController {
 	@Autowired
 	
 	SoutenanceService soutenanceService;
-@GetMapping()
+@GetMapping("all")
 	public List<Soutenance> all (){ 
 		return soutenanceService.getAllSoutenance();
 

@@ -20,7 +20,7 @@ public class PFE {
 	private long idPFE;
 	private String title;
 	private String dateDebut;
-	private String dateFin;
+	private Date dateDepot;
 	private String domaine;
 	private double note;
 
