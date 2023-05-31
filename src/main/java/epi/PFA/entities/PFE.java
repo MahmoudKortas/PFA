@@ -23,7 +23,7 @@ public class PFE {
 	private String dateDebut;
 	private Date dateDepot;
 	private String domaine;
-	private double note;
+
 
 	@ManyToOne
 	private Etudiant etudiant;
