@@ -19,6 +19,7 @@ public class PFE {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long idPFE;
 	private String title;
+	private String description;
 	private String dateDebut;
 	private Date dateDepot;
 	private String domaine;
@@ -29,11 +30,5 @@ public class PFE {
 	@ManyToOne
 	private Enseignant encadreur;
 	@ManyToOne
-	private Enseignant rapporteur;
-	@ManyToOne
-	private Enseignant president;
-	@ManyToOne
-	private Salle salle;
-	@ManyToOne
-	private Seance seance;
+	private Document document;
 }

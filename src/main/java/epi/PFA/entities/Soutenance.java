@@ -22,11 +22,7 @@ public class Soutenance {
 private long idSout;
 private String Description;	 
 private String date;
-
 private String Etat;
-
-
-
 
 
 @ManyToOne
