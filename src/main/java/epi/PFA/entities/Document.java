@@ -22,7 +22,6 @@ public class Document {
 	private long idDoc;
 	private String titre;
 	private String description;
-	private String proprietaire;
 	private String datedepot;
 	private String photo;
 	/*@OneToMany(mappedBy="document")
@@ -30,6 +29,8 @@ public class Document {
 	List<PFE> documents;*/
 	@ManyToOne
 	private Etudiant etudiant;
+	@ManyToOne
+	private Responsable responsable;
 	@ManyToOne
 	private Enseignant enseignant;
 }
