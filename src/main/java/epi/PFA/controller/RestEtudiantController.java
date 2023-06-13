@@ -28,10 +28,16 @@ public class RestEtudiantController {
 	@Autowired
 	EtudiantService etudiantService;
 @GetMapping("all")
-	public List<Etudiant> all (){ 
+	public List<Etudiant> all(){ 
 		return etudiantService.getAllEtudiants();
 
 	}
+@GetMapping("verif")
+public List<Etudiant> verifEtud(){ 
+	
+	return etudiantService.getAllEtudiants();
+
+}
 
 	@GetMapping ("{id}")
 	public Etudiant getEtudiant (@PathVariable Long id) {

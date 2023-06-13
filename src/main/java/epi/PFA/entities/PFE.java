@@ -21,7 +21,7 @@ public class PFE {
 	private String title;
 	private String description;
 	private String dateDebut;
-	private Date dateDepot;
+	private String dateDepot;
 	private String domaine;
 	private double note;
 

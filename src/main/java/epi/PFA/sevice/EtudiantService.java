@@ -17,7 +17,11 @@ public class EtudiantService {
 	@Autowired
 EtudiantRepository etudiantRepository;
 	
-	
+public List<Etudiant> getEtudiantsNonPFE() {
+		
+		return etudiantRepository.findAll();
+	}
+
 	
 	public List<Etudiant> getAllEtudiants() {
 		
