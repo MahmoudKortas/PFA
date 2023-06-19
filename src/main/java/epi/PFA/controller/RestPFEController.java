@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import epi.PFA.entities.Enseignant;
+import epi.PFA.entities.Encadrant;
 import epi.PFA.entities.Etudiant;
 import epi.PFA.entities.PFE;
 import epi.PFA.repository.PFERepository;
-import epi.PFA.sevice.EnseignantService;
+import epi.PFA.sevice.EncadrantService;
 import epi.PFA.sevice.EtudiantService;
 import epi.PFA.sevice.PFEService;
 
@@ -31,8 +31,7 @@ public class RestPFEController {
 	@Autowired
 	
 	PFEService pfeService;
-	EtudiantService etudiantService;
-	EnseignantService enseignantService;
+
 
     @GetMapping("all")
 	public List<PFE> all (){ 

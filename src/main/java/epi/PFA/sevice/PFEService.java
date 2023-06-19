@@ -6,10 +6,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import epi.PFA.entities.Enseignant;
+import epi.PFA.entities.Encadrant;
 import epi.PFA.entities.Etudiant;
 import epi.PFA.entities.PFE;
-import epi.PFA.repository.EnseignantRepository;
+import epi.PFA.repository.EncadrantRepository;
 import epi.PFA.repository.EtudiantRepository;
 import epi.PFA.repository.PFERepository;
 

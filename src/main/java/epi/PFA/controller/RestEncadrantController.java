@@ -14,57 +14,57 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import epi.PFA.entities.Enseignant;
+import epi.PFA.entities.Encadrant;
 import epi.PFA.entities.Etudiant;
-import epi.PFA.sevice.EnseignantService;
+import epi.PFA.sevice.EncadrantService;
 import epi.PFA.sevice.EtudiantService;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/api/enseignants/")
-public class RestEnseignantController {
+@RequestMapping("/api/encadrants/")
+public class RestEncadrantController {
 	
 	
 	@Autowired
-	EnseignantService enseignantService;
+	EncadrantService encadrantService;
 	
     @GetMapping("all")
-	public List<Enseignant> all(){ 
-		return enseignantService.getAllEnseignants();
+	public List<Encadrant> all(){ 
+		return encadrantService.getAllEncadrants();
 
 	}
 
 	@GetMapping ("{id}")
-	public Enseignant getEnseignant (@PathVariable Long id) {
+	public Encadrant getEncadrant (@PathVariable Long id) {
 
-	return enseignantService.findEnseignantById(id);
+	return encadrantService.findEncadrantById(id);
 
 	}
 
 	@PostMapping("add")
-	public Enseignant addChaine (@RequestBody Enseignant e) { 
-		return enseignantService.persistEnseignant(e);
+	public Encadrant addChaine (@RequestBody Encadrant e) { 
+		return encadrantService.persistEncadrant(e);
 
 	}
 
 	@DeleteMapping("{id}")
 
-	public  String deleteEnseignant(@PathVariable Long id) { 
-			enseignantService.deleteEnseignant(id); 
+	public  String deleteEncadrant(@PathVariable Long id) { 
+			encadrantService.deleteEncadrant(id); 
 			return "Suppression réussite";
 
 	}
 	@GetMapping("edit/{id}")
-	public String editEnseignant(@PathVariable Long id, Model model) {
-		model.addAttribute("enseignant", enseignantService.findEnseignantById(id));
+	public String editEncadrant(@PathVariable Long id, Model model) {
+		model.addAttribute("Encadrant", encadrantService.findEncadrantById(id));
 		
-		return "editEnseignant";
+		return "editEncadrant";
 	}
 	
 	@PutMapping("update")
-	public Enseignant updateEnseignant(@RequestBody  Enseignant en)
+	public Encadrant updateEncadrant(@RequestBody  Encadrant en)
 	{
-		 return enseignantService.persistEnseignant(en);
+		 return encadrantService.persistEncadrant(en);
 		
 	}
 

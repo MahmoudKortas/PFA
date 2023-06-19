@@ -28,7 +28,7 @@ public class PFE {
 	@ManyToOne
 	private Etudiant etudiant;
 	@ManyToOne
-	private Enseignant encadreur;
+	private Encadrant encadreur;
 	@ManyToOne
 	private Document document;
 }

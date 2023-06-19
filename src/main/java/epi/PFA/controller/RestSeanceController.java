@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import epi.PFA.entities.Enseignant;
+import epi.PFA.entities.Encadrant;
 import epi.PFA.entities.Etudiant;
 import epi.PFA.entities.Salle;
 import epi.PFA.entities.Seance;

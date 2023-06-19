@@ -32,5 +32,5 @@ public class Document {
 	@ManyToOne
 	private Responsable responsable;
 	@ManyToOne
-	private Enseignant enseignant;
+	private Encadrant enseignant;
 }

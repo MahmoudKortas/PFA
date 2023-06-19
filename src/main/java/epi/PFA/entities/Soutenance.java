@@ -26,9 +26,9 @@ private String Etat;
 
 
 @ManyToOne
-private Enseignant rapporteur;
+private Encadrant rapporteur;
 @ManyToOne
-private Enseignant president;
+private Encadrant president;
 @ManyToOne
 private Salle salle;
 @ManyToOne

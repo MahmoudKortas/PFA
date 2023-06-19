@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 
-public class Enseignant{
+public class Encadrant{
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long idEns;
