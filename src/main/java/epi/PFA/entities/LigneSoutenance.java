@@ -17,13 +17,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Entity
-public class Ligne_Soutenance {
+public class LigneSoutenance {
  @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 private long idLigne;
-private Double Note_rapport ;	 
-private Double Note_QR;
-private Double Note_presentation;
-private Double Note_application;
+private Double Noterapport ;	 
+private Double NoteQR;
+private Double Notepresentation;
+private Double Noteapplication;
 
 
 
