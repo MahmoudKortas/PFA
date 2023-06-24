@@ -22,7 +22,7 @@ public class Document {
 	private long idDoc;
 	private String titre;
 	private String description;
-	private String datedepot;
+	private String date;
 	private String photo;
 	/*@OneToMany(mappedBy="document")
 
@@ -32,5 +32,5 @@ public class Document {
 	@ManyToOne
 	private Responsable responsable;
 	@ManyToOne
-	private Encadrant encadreur;
+	private Encadrant encadrant;
 }

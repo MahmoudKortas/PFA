@@ -29,6 +29,6 @@ private Double Noteapplication;
 
 
 @ManyToOne
-private PFE pfe;
+private Soutenance soutenance;
 
 }
