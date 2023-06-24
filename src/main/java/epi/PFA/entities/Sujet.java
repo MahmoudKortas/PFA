@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 public class Sujet {
 	@Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-	private long idDoc;
+	private long idSujet;
 	private String titre;
 	private String description;
 	private String date;
