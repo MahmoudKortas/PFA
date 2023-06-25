@@ -18,6 +18,7 @@ public class PFE {
 	@Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long idPFE;
+	private String title;
 	private String dateDebut;
 	private String dateDepot;
 	
