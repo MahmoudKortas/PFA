@@ -39,20 +39,20 @@ public class RestLigneSoutenanceController {
 	}
 
 	@PostMapping("add")
-	public LigneSoutenance addChaine (@RequestBody LigneSoutenance p) { 
-		return LigneSoutenanceService.persistLigneSoutenance(p);
+	public LigneSoutenance addChaine (@RequestBody LigneSoutenance s) { 
+		return LigneSoutenanceService.persistLigneSoutenance(s);
 
 	}
 
 	@DeleteMapping("{id}")
-	public void deleteChaine (@PathVariable Long id) { 
+	public String deleteChaine (@PathVariable Long id) { 
 		LigneSoutenanceService.deleteLigneSoutenance(id); 
-		//return "Suppression réussite"; 
+		return "Suppression réussite"; 
 	} 
 
 	@PutMapping("update")
-	public LigneSoutenance updateLigneSoutenance(@RequestBody LigneSoutenance p) {
-		return LigneSoutenanceService.persistLigneSoutenance(p);
+	public LigneSoutenance updateLigneSoutenance(@RequestBody LigneSoutenance s) {
+		return LigneSoutenanceService.persistLigneSoutenance(s);
 	}
 
 }

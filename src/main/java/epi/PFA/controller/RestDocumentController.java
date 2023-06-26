@@ -79,9 +79,9 @@ public class RestDocumentController {
 
 
 	@DeleteMapping("{id}")
-	public void deleteDocument(@PathVariable Long id) {
+	public String deleteDocument(@PathVariable Long id) {
 		documentService.deleteDocument(id); 
-		//return "Suppression réussite";
+		return "Suppression réussite";
 
 	}
 

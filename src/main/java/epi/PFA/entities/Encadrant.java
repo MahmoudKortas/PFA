@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 public class Encadrant{
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Long idEns;
+    private Long idEnc;
 	private String nom;
 	private String prenom;
 	private int tel;

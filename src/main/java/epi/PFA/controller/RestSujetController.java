@@ -65,14 +65,6 @@ public class RestSujetController {
 	
 	
 	 
-	/*@PutMapping("{id}")
-	public String updateEtudiant (@RequestBody Etudiant e,@PathVariable Long id) {
-		System.out.println("aaaaaaaaaaaaaaaaa");
-		System.out.println("Etudiant:"+e+"id"+id);
-		Etudiant ee=etudiantService.findEtudiantById(e.getIdEtud()); 	
-		
-		 etudiantService.persistEtudiant(e);
-			return "updateEtudiant réussite";
-	}*/
+	
 
 }

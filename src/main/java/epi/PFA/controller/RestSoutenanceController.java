@@ -39,20 +39,20 @@ public class RestSoutenanceController {
 	}
 
 	@PostMapping("add")
-	public Soutenance addChaine (@RequestBody Soutenance p) { 
-		return soutenanceService.persistSoutenance(p);
+	public Soutenance addChaine (@RequestBody Soutenance so) { 
+		return soutenanceService.persistSoutenance(so);
 
 	}
 
 	@DeleteMapping("{id}")
-	public void deleteChaine (@PathVariable Long id) { 
+	public String deleteChaine (@PathVariable Long id) { 
 		soutenanceService.deleteSoutenance(id); 
-		//return "Suppression réussite"; 
+		return "Suppression réussite"; 
 	} 
 
 	@PutMapping("update")
-	public Soutenance updateSoutenance(@RequestBody Soutenance p) {
-		return soutenanceService.persistSoutenance(p);
+	public Soutenance updateSoutenance(@RequestBody Soutenance so) {
+		return soutenanceService.persistSoutenance(so);
 	}
 
 }
